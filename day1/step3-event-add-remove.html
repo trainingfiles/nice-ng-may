@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 800px;
+            background-color: silver;
+            border: 1px solid darkslategray;
+            margin: auto;
+            overflow: auto;
+        }
+        button{
+            display: block;
+            padding: 5px;
+            margin: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            border: 1px solid rgb(123, 69, 3);
+            margin: 5px;
+            float: left;
+        }
+    </style>
+    <script>
+        function init(){
+            document.getElementsByTagName("button")[0].addEventListener("click", add_box);
+            document.getElementsByTagName("button")[1].addEventListener("click", stop_adding_box);
+            document.getElementsByTagName("button")[2].addEventListener("click", activate_adding_box);
+        };
+        function add_box(){
+            var box = document.createElement("div");
+            document.getElementsByClassName("container")[0].appendChild(box);
+        }
+        function stop_adding_box(){
+            document.getElementsByTagName("button")[0].removeEventListener("click", add_box);
+        }
+        function activate_adding_box(){
+            document.getElementsByTagName("button")[0].addEventListener("click", add_box);
+        }
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <br>
+    <button>Stop Adding Box</button>
+    <br>
+    <button>Activate Adding Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>

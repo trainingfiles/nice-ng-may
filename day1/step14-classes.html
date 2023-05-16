@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in ES6</title>
+    <script>
+        /* 
+        class 
+            constructor
+                super()
+
+            private properties
+                getters
+                setters
+
+            public properties
+
+            private methods
+            public methods
+
+            static properties
+            static methods
+        */
+
+        class Person{
+            canfly = "default canfly";
+            constructor(cf){
+                this.canfly = cf;
+            }
+        };
+
+        class Hero extends Person{
+            title = "default title";
+            firstname = "default title";
+            lastname = "default title";
+            #power = 5;
+            static version = 101;
+            constructor(htitle, hfname, hlname, hcf){
+                super(hcf);
+                this.title = htitle;
+                this.firstname = hfname;
+                this.lastname = hlname;
+            }
+            get power(){
+                return this.#power;
+            }
+            set power(npower){
+                this.#power = npower;
+            }
+            saytitle(){
+                return this.title;
+            }
+            sayname(){
+                return this.firstname+" "+this.lastname;
+            }
+        };
+
+        var hero = new Hero("Batman","Bruce", "Wayne","no");
+        console.log( hero.power );
+        console.log( hero.saytitle() );
+        console.log( hero.power )
+        hero.power = 10;
+        console.log( hero.power );
+        console.log( hero.sayname() );
+        console.log( hero.canfly );
+        
+        var hero1 = new Hero("Superman","Clark","Kent","yes");
+        console.log( hero1.power );
+        console.log( hero1.saytitle() );
+        console.log( hero1.power );
+        hero1.power = 12;
+        console.log( hero1.power );
+        console.log( hero1.sayname() );
+        console.log( Hero.version );
+        console.log( hero1.canfly );
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script>
+
+        /* 
+        var shop = {
+            costprice : function(){
+                return 100
+            },
+            sellingprice : function(){
+                var calculateProfit = function(scope){
+                   return scope.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit(this);
+            }
+        }; 
+        */
+
+        /* 
+        var shop = {
+            costprice : function(){
+                return 100
+            },
+            sellingprice : function(){
+                var scope = this;
+                var calculateProfit = function(){
+                   return scope.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit();
+            }
+        }; 
+        */
+
+        /* 
+        var shop = {
+            costprice : function(){
+                return 100
+            },
+            sellingprice : function(){
+                var calculateProfit = function(){
+                   return this.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit.call(this);
+            }
+        };  
+        */
+
+        /* 
+        var shop = {
+            costprice : function(){
+                return 100
+            },
+            sellingprice : function(){
+                var calculateProfit = function(){
+                   return this.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit.apply(this);
+            }
+        };   
+        */
+
+        /* 
+        var shop = {
+            costprice : function(){
+                return 100
+            },
+            sellingprice : function(){
+                var calculateProfit = function(){
+                   return this.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit.bind(this)();
+            }
+        };   
+        */
+        var costprice = function(){
+            return 1000;
+        };
+
+        var shop = {
+            costprice : () => {
+                return 100;
+            },
+            sellingprice : () => {
+                var calculateProfit = () => {
+                   return this.costprice() * 0.2;
+                }
+                return this.costprice() + calculateProfit();
+            }
+        };  
+
+        console.log( shop.costprice() ); // 100
+        console.log( shop.sellingprice() ); // 120 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

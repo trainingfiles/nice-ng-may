@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hero = {
+            title : "Batman",
+            power : 7,
+            firstname : "Bruce",
+            lastname : "Wayne",
+            city : "Gotham"
+        };
+
+       /*  
+        var temphero = hero;
+
+        console.log( temphero.title );
+        console.log( temphero.power );// 7
+        temphero.power = 10;
+        console.log( temphero.power ); // 10
+        console.log( hero.power ); // ??? 
+        */
+
+        // destructuring 
+        /* 
+        var temphero_title = hero.title;
+        var temphero_power = hero.power;
+        var temphero_firstname = hero.firstname;
+        var temphero_lastname = hero.lastname;
+        var temphero_city = hero.city; 
+        */
+
+        /*  
+        var temphero_title = hero.title,
+            temphero_power = hero.power,
+            temphero_firstname = hero.firstname,
+            temphero_lastname = hero.lastname,
+            temphero_city = hero.city;  
+        */
+
+        // destructuring 
+        /* var { 
+            title : title, 
+            power : power, 
+            city : city, 
+            firstname : firstname, 
+            lastname : lastname } = hero; 
+        */
+           
+        // destructuring 
+        var { title, power, city, firstname, lastname } = hero;
+
+        console.log( power );// 7
+        power = 10;
+        console.log( power ); // 10
+        console.log( hero.power ); // 7
+        
+        /* 
+        var temphero = {};
+        temphero.power = hero.power;
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

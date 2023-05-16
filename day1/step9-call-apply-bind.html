@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Apply Bind</title>
+    <script>
+        var ironman = {
+            title : "Iroman",
+            firstname : "Tony",
+            lastname : "Stark",
+            fullname : function(message, city){
+                return this.firstname+" "+this.lastname+" is "+this.title+" says "+message+" from "+city;
+            }
+        };
+
+        var spiderman = {
+            title : "Spiderman",
+            firstname : "Peter",
+            lastname : "Parker"
+        };
+
+        var hulk = {
+            title : "Hulk",
+            firstname : "Bruce",
+            lastname : "Benner"
+        };
+
+       /*
+        console.log(ironman.fullname("love you 3000", "new york"));
+        console.log(ironman.fullname.call(spiderman," with great powers comes great responsibilities","new york"));
+        console.log(ironman.fullname.call(hulk," i am hulk ","pune"));
+       */
+       /*  
+       console.log(ironman.fullname("love you 3000", "new york"));
+       console.log(ironman.fullname.apply(spiderman,[" with great powers comes great responsibilities","new york"]));
+       console.log(ironman.fullname.apply(hulk,[" i am hulk ","pune"]));
+       */
+
+       console.log(ironman.fullname("love you 3000", "new york"));
+       var spidermessage = ironman.fullname.bind(spiderman);
+       var hulkmessage = ironman.fullname.bind(hulk);
+
+       console.log(spidermessage("with great powers comes great responsibilities","new york"));
+       console.log(spidermessage(" i am hulk ","pune"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Improvements</title>
+    <script>
+       /*  
+        function adder(num1, num2){
+            return num1 + num2;
+        }; 
+        */
+        /* 
+        function adder(num1, num2){
+            var tempnum1 = num1 || 0;
+            var tempnum2 = num2 || 0;
+            return tempnum1 + tempnum2;
+        }; 
+        */
+
+       // default parameters
+        /* function adder(num1 = 0, num2 = 0){
+            return num1 + num2;
+        };
+        console.log(adder(5)); */
+
+        // ES3
+        /* function adder(){
+            // return arguments.length;
+            var total = 0;
+            for(let i = 0; i < arguments.length; i++){
+                total += arguments[i]
+            }
+            return total;
+        }; */
+        
+        // ES5
+        // REST Parameters
+       /*  
+       function adder(title, ...nums){
+            var total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i]
+            }
+            return total;
+        };
+        console.log(adder("Sum ",5));
+        console.log(adder("Sum ",5,6));
+        console.log(adder("Sum ",5,6,7));
+        console.log(adder("Sum ",5,6,7,8));
+        console.log(adder("Sum ",5,6,7,8,9)); 
+        */
+
+        // Rest arguments / parameters
+        function adder(...nums){
+            var total = 0;
+            for(let i = 0; i < nums.length; i++){
+                total += nums[i]
+            }
+            return total;
+        };
+
+        let args = [5,6,7,8,9];
+
+        // console.log(adder(args[0],args[1],args[2],args[3],args[4]));
+
+        // Spread Syntax
+        console.log(adder(...args));
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

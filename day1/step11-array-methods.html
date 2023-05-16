@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <script>
+        var favnums = [11,53,25,8,20,7,99,88,15,8,17];
+
+       /*  
+        for(var i = 0; i < favnums.length; i++){
+            console.log( favnums[i] );
+        };
+        */
+
+        /*  
+        favnums.forEach(function(val, idx, arr){
+            console.log(idx, val, arr);
+        }) 
+        */
+
+       // forEach 
+       // favnums.forEach( (val)=> console.log(val) );
+       
+       // map
+       // var double_favnums = favnums.map( (val)=> val * 2);
+
+       /*    
+       console.log(favnums);
+       console.log("++++++++++++++++++++++");
+       console.log(double_favnums); 
+       */
+
+       /* Filter
+       var above20 = favnums.filter(val => val > 20);
+       var below20 = favnums.filter(val => val < 20);
+
+       console.log( above20 );
+       console.log( below20 ); 
+       */
+
+      /*  every
+       var allAbove10 = favnums.every( val => {
+        console.log(val);
+        return  val > 10;
+       } );
+
+       console.log(allAbove10); 
+       */
+
+       // some
+       /*  
+       var allAbove10 = favnums.some( val => {
+           console.log(val);
+           return  val > 10;
+        } );
+        
+        console.log(allAbove10); 
+        */
+
+       // reduce
+        /* 
+        var total = favnums.reduce(function(initVal,val){
+            console.log(val);
+            return initVal + val;
+        },0); 
+        */
+        // reduceRight
+        /* 
+        var total = favnums.reduceRight(function(initVal,val){
+            console.log(val);
+            return initVal + val;
+        },0); 
+        console.log(total);
+        */
+
+        // console.log( favnums.indexOf(8) );
+        // console.log( favnums.lastIndexOf(8) );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script>
+        var promise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                if(true){
+                    resolve("Resolve method was called");
+                }else{
+                    reject("Reject method was called");
+                }
+            },4000);
+        });
+/* 
+        promise.then( function(res){
+            console.log("Success ", res);
+        });
+        promise.catch( function(err){
+            console.log("Error ", err);
+        });
+        promise.finally( function(){
+            console.log("Promise is complete");
+        }); */
+
+        
+        /* 
+        promise.then( function(res){
+            console.log("Success ", res);
+        }).catch( function(err){
+            console.log("Error ", err);
+        }).finally( function(){
+            console.log("Promise is complete");
+        }); 
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/app.component.js"></script>
+    <script>
+        let comp = new AppComponent();
+        document.addEventListener("DOMContentLoaded", function(){
+            let temp = comp.template;
+            temp = temp.replace("{{ title }}", comp.title)
+            .replace("{{ power }}", comp.power)
+            .replace("{{ power }}", comp.power)
+            document.getElementsByTagName(comp.selector)[0].innerHTML = temp;
+        });
+    </script>
+</head>
+<body>
+    <app-root></app-root>
+</body>
+</html>

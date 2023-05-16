@@ -1,0 +1,35 @@
+node -v
+ 
+to install typescript
+npm i -g typescript
+ 
+to know version of typescript
+tsc -v
+ 
+to create typescript config file
+tsc --init
+ 
+to install angular
+npm i -g @angular/cli
+ 
+to check angular version
+ng v
+
+===========================================================================
+to create angular environment without a project
+ng new steps --create-application=false
+===========================================================================
+cd steps 
+create an application with following configurations
+without routing --routing=false
+using css for styles --style=css
+without external template -t
+without external css -s
+without generating test tiles -S
+
+ng g application step1-binding --routing=false --style=css -t -s -S 
+===========================================================================
+to run the application in debug mode 
+-o to open the browser to launch the project
+--port to change the default port 
+ng serve step1-binding -o --port=5050 

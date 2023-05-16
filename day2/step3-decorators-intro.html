@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*  
+       function addPower(pow){
+            return function(person){
+                return {
+                    name : person.name,
+                    power : pow
+                }
+            }
+        }
+
+        let commonman = {
+            name : "Bruce Wayne"
+        }; 
+        */
+
+
+       /*  
+        let temphero = addPower(5);
+        commonman = temphero(commonman); 
+        */
+
+       /*  
+       commonman = addPower(5)(commonman);
+
+        console.log(commonman); 
+        */
+
+        function addPower(pow){
+            return function(TargetClass){
+                let person = new TargetClass()
+                return class{
+                    name = person.name;
+                    power = pow
+                }
+            }
+        }
+
+        class Commonman{
+            name = "Bruce Wayne"
+        };
+
+        Commonman = addPower(7)(Commonman)
+        var cm = new Commonman()
+        console.log( cm );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

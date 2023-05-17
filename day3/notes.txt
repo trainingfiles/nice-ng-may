@@ -1,0 +1,6 @@
+ng g application step1-pipes --routing=false --style=css -t -s -S  
+ng g c tabs --project=step3-grid-tab -t -s --flat --skip-tests=true     
+
+
+https://tooncrush.com/data.zip
+https://tooncrush.com/images.zip

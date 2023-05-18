@@ -1,0 +1,25 @@
+ ng new steps --create-application=false
+
+ng g app step1-forms --routing=false --style=css -t -s -S 
+
+ng g c template-form -t -s --skip-tests=true --flat     
+
+ng g c template-form --project=step1-forms -t -s --skip-tests=true --flat
+ng g c reactive-form --project=step1-forms -t -s --skip-tests=true --flat
+
+
+----------------------------------------------------------------------
+
+npm init -y
+
+express : to create web server 
+cors : to bypass the CORS restrictions
+mongoose : ORM for mongodb 
+
+
+npm i express cors mongoose 
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
